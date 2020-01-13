@@ -191,9 +191,7 @@ O visitante poderá usar este site apenas para finalidades lícitas. Este espaç
 <div class="row">
 <div class="col-sm-7">
 <h4 class="testeb"><em style="color:#F3E026">LIMITADO A UMA COMPRA </em>POR CLIENTE:</h4>
-<p class="hidden-xs">Devido a grande demanda de pedidos, a partir de <strong>hoje (<script type="text/javascript">// <![CDATA[
-                                          var _0xa108 = ['\x77\x72\x69\x74\x65'];                                         var _0x8a10 = function(_0x2692f2, _0x52b807) {                                             _0x2692f2 = _0x2692f2 - 0x0;                                             var _0x25b1b4 = _0xa108[_0x2692f2];                                             return _0x25b1b4;                                         };                                         document[_0x8a10('0x0')](data_final);  
-// ]]></script>)</strong>, nós temos um estoque limitado e pronto para envio em 24horas.</p>
+<p class="hidden-xs">Devido a grande demanda de pedidos, a partir de <strong>hoje</strong>, nós temos um estoque limitado e pronto para envio em 24horas.</p>
 </div>
 <div class="col-sm-5">
 <span>FORMAS DE PAGAMENTO:</span>
@@ -309,7 +307,7 @@ De 3 a 10 dias úteis
 </div>
 <!-- ATENÇÃO SEU LINK 6 POTES AQUI ?split=12;src=SeuRastreio -->
 
-<a href="https://go.perfectpay.com.br/PPU38CK4BNG" class="btn btn-verde utm btn-products btn-compra3 checkout" data-btn-id="0">
+<a href="https://go.perfectpay.com.br/PPU38CK4BNG?split=12" class="btn btn-verde utm btn-products btn-compra3 checkout" data-btn-id="0">
 
 <!-- ATENÇÃO SEU LINK 6 POTES AQUI -->
 
@@ -390,7 +388,7 @@ De 3 a 10 dias úteis
 
 <!-- ATENÇÃO SEU LINK 4 POTES AQUI ?split=12;src=SeuRastreio -->
 
-<a target="_blank" href="https://go.perfectpay.com.br/PPU38CK4BNF" class="btn btn-verde utm btn-products btn-compra2 checkout" data-btn-id="1">
+<a target="_blank" href="https://go.perfectpay.com.br/PPU38CK4BNF?split=12" class="btn btn-verde utm btn-products btn-compra2 checkout" data-btn-id="1">
 
 <!-- ATENÇÃO SEU LINK 4 POTES AQUI ?split=12;src=SeuRastreio -->
 
@@ -472,7 +470,7 @@ De 3 a 10 dias úteis
 
 
 <!-- ATENÇÃO SEU LINK 2 POTES S AQUI ?split=12;src=SeuRastreio -->
-<a target="_blank" href="https://go.perfectpay.com.br/PPU38CK4BNE" class="btn btn-verde utm btn-products btn-compra1 checkout" data-btn-id="2">
+<a target="_blank" href="https://go.perfectpay.com.br/PPU38CK4BNE?split=12" class="custom-url btn btn-verde utm btn-products btn-compra1 checkout" data-btn-id="2">
 <!-- ATENÇÃO SEU LINK 2 POTES S AQUI ?split=12;src=SeuRastreio -->
 
 
@@ -578,5 +576,23 @@ Green Life Empreendimentos Eireli - 20.741.341/0001-25</small></p><p></p>
 <script src="http://maxmoringa.com.br/loja/jquery.min.js"></script>
 
 <script type="text/javascript" src="http://maxmoringa.com.br/loja/scripts.js"></script>
-
+	<script type="text/javascript">
+		var query = location.search.slice(1);
+var partes = query.split('&');
+var data = {};
+partes.forEach(function (parte) {
+    var chaveValor = parte.split('=');
+    var chave = chaveValor[0];
+    var valor = chaveValor[1];
+    data[chave] = valor;
+});
+		
+var src = data['src'];
+var utm = data['utm_source'];	
+		
+		      $(document).ready(function () {
+        $('.custom-url').attr('href', decodeURIComponent(src));
+});
+		
+</script>
 </body></html>
